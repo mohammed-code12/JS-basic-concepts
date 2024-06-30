@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <body></body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+  </head>
+  <script>
+    async function welcome() {
+      let dehliWeather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("30 Deg");
+        }, 1000);
+      });
+
+      let mumWeather = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("35 Deg");
+        }, 5000);
+      });
+      //   dehliWeather.then(alert);
+      //   mumWeather.then(alert);
+      console.log("Fetching Dehli Weather Please wait....");
+      let dehliW = await dehliWeather;
+      console.log("Fetching Dehli Weather:" + dehliW);
+      console.log("Fetching Mum Weather Please wait....");
+
+      let mumW = await mumWeather;
+      console.log("Fetching Mum Weather:" + mumW);
+
+      return [dehliW, mumW];
+    }
+    console.log("Welcome to weather control room");
+    let a = welcome();
+    // console.log(a);
+    a.then((value) => {
+      console.log(value);
+    });
+  </script>
+  <body></body>
+</html>
