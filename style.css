@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    background-color: rgb(12, 9, 15);
+    padding: 12px 0;
+}
+.navbar nav ul li{
+    display: inline;
+    text-decoration: none;
+    list-style-type: none;
+    font-weight: bolder;
+    color: white;
+    padding: 23px;
+
+}
